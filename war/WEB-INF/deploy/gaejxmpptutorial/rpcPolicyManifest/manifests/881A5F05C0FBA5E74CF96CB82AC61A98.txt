@@ -1,0 +1,2 @@
+serviceClass: group9.com.client.GreetingService
+path: FA01FC92DE4325728100889FEFF9C0C4.gwt.rpc

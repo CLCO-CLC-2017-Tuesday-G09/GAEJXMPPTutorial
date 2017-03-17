@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+              http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+         version="2.5"
+         xmlns="http://java.sun.com/xml/ns/javaee">
+
+	  
+ <servlet>
+    <servlet-name>error</servlet-name>
+    <servlet-class>group9.com.ErrorServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>error</servlet-name>
+    <url-pattern>/_ah/xmpp/error/</url-pattern>
+  </servlet-mapping>
+  <!-- [START messagereceiver] -->
+  <servlet>
+    <servlet-name>messagereceiver</servlet-name>
+    <servlet-class>group9.com.MessageReceiverServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>messagereceiver</servlet-name>
+    <url-pattern>/_ah/xmpp/message/chat/</url-pattern>
+  </servlet-mapping>
+  <servlet>
+  <!-- [END messagereceiver] -->
+    <servlet-name>messagesender</servlet-name>
+    <servlet-class>group9.com.MessageSenderServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>messagesender</servlet-name>
+    <url-pattern>/messagesender</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>presence</servlet-name>
+    <servlet-class>group9.com.PresenceServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>presence</servlet-name>
+    <url-pattern>/_ah/xmpp/presence/available/</url-pattern>
+    <url-pattern>/_ah/xmpp/presence/unavailable/</url-pattern>
+    <url-pattern>/_ah/xmpp/presence/probe/</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>subscription</servlet-name>
+    <servlet-class>group9.com.SubscriptionServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>subscription</servlet-name>
+    <url-pattern>/_ah/xmpp/subscription/subscribe/</url-pattern>
+    <url-pattern>/_ah/xmpp/subscription/subscribed/</url-pattern>
+    <url-pattern>/_ah/xmpp/subscription/unsubscribe/</url-pattern>
+    <url-pattern>/_ah/xmpp/subscription/unsubscribed/</url-pattern>
+  </servlet-mapping>
+    
+  <!-- Default page to serve -->
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+  </welcome-file-list>
+
+</web-app>

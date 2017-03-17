@@ -1,0 +1,3 @@
+# Module gaejxmpptutorial
+# RPC service class, partial path of RPC policy file
+group9.com.client.GreetingService, FA01FC92DE4325728100889FEFF9C0C4.gwt.rpc
